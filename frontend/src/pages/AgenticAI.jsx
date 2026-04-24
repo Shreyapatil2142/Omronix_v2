@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/shared/Hero';
 import Section, { SectionHeader } from '../components/shared/Section';
 import Card from '../components/ui/Card';
@@ -204,8 +205,12 @@ const AgenticAI = () => {
             <h2 className="text-4xl md:text-6xl font-heading font-bold text-white max-w-4xl mx-auto leading-tight">Ready to Deploy Your First AI Agent?</h2>
             <p className="text-white/50 text-xl max-w-2xl mx-auto">Join the front line of autonomous intelligence and transform your operations today.</p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
-              <Button size="lg">DEPLOY AN AI AGENT</Button>
-              <Button variant="secondary" size="lg">BOOK A DEMO</Button>
+              <Link to="/contact">
+                <Button size="lg">DEPLOY AN AI AGENT</Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="secondary" size="lg">BOOK A DEMO</Button>
+              </Link>
             </div>
           </div>
         </div>

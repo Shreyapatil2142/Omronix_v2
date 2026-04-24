@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/shared/Hero';
 import Section, { SectionHeader } from '../components/shared/Section';
 import Card, { CardContent } from '../components/ui/Card';
@@ -58,7 +59,9 @@ const Home = () => {
                 </div>
               ))}
             </div>
-            <Button variant="secondary">READ MORE</Button>
+            <Link to="/contact">
+              <Button variant="secondary">READ MORE</Button>
+            </Link>
           </div>
         </div>
       </Section>
@@ -137,10 +140,10 @@ const Home = () => {
               </div>
               <h3 className="text-lg md:text-2xl font-heading font-bold mb-2 md:mb-4">{service.title}</h3>
               <p className="text-white/50 text-xs md:text-base mb-4 md:mb-8 flex-grow">{service.desc}</p>
-              <a href="#" className="text-primary text-xs md:text-base font-bold inline-flex items-center group-hover:gap-3 transition-all">
+              <Link to="/contact" className="text-primary text-xs md:text-base font-bold inline-flex items-center group-hover:gap-3 transition-all">
                 Learn More 
                 <svg className="w-4 h-4 md:w-5 md:h-5 ml-1 md:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </a>
+              </Link>
             </Card>
           ))}
         </div>

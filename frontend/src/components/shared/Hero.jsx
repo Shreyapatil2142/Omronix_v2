@@ -1,5 +1,5 @@
-import React from 'react';
 import Button from '../ui/Button';
+import { Link } from 'react-router-dom';
 
 const Hero = ({ 
   badge, 
@@ -39,8 +39,12 @@ const Hero = ({
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <Button size="lg">{primaryBtnText}</Button>
-            <Button variant="secondary" size="lg">{secondaryBtnText}</Button>
+            <Link to="/contact">
+              <Button size="lg">{primaryBtnText}</Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="secondary" size="lg">{secondaryBtnText}</Button>
+            </Link>
           </div>
           
           {stats.length > 0 && (

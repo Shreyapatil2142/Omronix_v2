@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import Card, { CardContent } from '../components/ui/Card';
 import Hero from '../components/shared/Hero';
@@ -307,9 +308,11 @@ const Blockchain = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant={item.featured ? 'primary' : 'secondary'} className="w-full">
-                    Select Platform
-                  </Button>
+                  <Link to="/contact">
+                    <Button variant={item.featured ? 'primary' : 'secondary'} className="w-full">
+                      Select Platform
+                    </Button>
+                  </Link>
                 </div>
               </details>
             ))}
@@ -364,12 +367,14 @@ const Blockchain = () => {
                     </li>
                   ))}
                 </ul>
-                <Button 
-                  variant={item.featured ? 'primary' : 'secondary'} 
-                  className="w-full"
-                >
-                  Select Platform
-                </Button>
+                <Link to="/contact">
+                  <Button 
+                    variant={item.featured ? 'primary' : 'secondary'} 
+                    className="w-full"
+                  >
+                    Select Platform
+                  </Button>
+                </Link>
               </Card>
             ))}
           </div>
@@ -404,8 +409,12 @@ const Blockchain = () => {
           <h2 className="text-4xl font-heading font-bold text-white mb-6">Ready to Decentralize Your Business?</h2>
           <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">Join the future of trustless infrastructure. Start your blockchain journey with Omronix today.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-white text-primary-container hover:bg-white/90">Get Free Consultation</Button>
-            <Button variant="secondary" size="lg" className="border-white/30 text-white hover:bg-white/10">Developer Dashboard</Button>
+            <Link to="/contact">
+              <Button size="lg" className="bg-white text-primary-container hover:bg-white/90 w-full sm:w-auto">Get Free Consultation</Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="secondary" size="lg" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto">Developer Dashboard</Button>
+            </Link>
           </div>
         </div>
       </section>

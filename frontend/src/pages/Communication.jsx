@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/shared/Hero';
 import Section, { SectionHeader } from '../components/shared/Section';
 import Card from '../components/ui/Card';
@@ -90,7 +91,25 @@ const Communication = () => {
               title="Secure & Scalable SMS Delivery"
               description="Reach your customers anywhere in the world with high-priority routes and direct carrier connections."
             />
-            <div className="grid grid-cols-2 gap-4 md:gap-4 md:block md:space-y-4">
+            <div className="space-y-3 md:space-y-4">
+              <div className="md:hidden space-y-3">
+                {smsFeatures.map((feature, idx) => (
+                  <details key={idx} className="glass-card rounded-2xl overflow-hidden">
+                    <summary className="list-none cursor-pointer p-4 flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-3 min-w-0">
+                        <span className="material-symbols-outlined text-secondary text-xl flex-shrink-0">{feature.icon}</span>
+                        <h4 className="font-heading font-bold text-white text-sm truncate">{feature.title}</h4>
+                      </div>
+                      <span className="text-white/40 text-2xl leading-none">+</span>
+                    </summary>
+                    <div className="px-4 pb-4 pt-1 border-t border-white/5">
+                      <p className="text-white/50 text-sm leading-relaxed">{feature.desc}</p>
+                    </div>
+                  </details>
+                ))}
+              </div>
+
+              <div className="hidden md:block space-y-4">
               {smsFeatures.map((feature, idx) => (
                 <div key={idx} className="flex gap-6 p-6 hover:bg-white/5 rounded-2xl transition-all border border-transparent hover:border-white/5 group">
                   <span className="material-symbols-outlined text-secondary pt-1 group-hover:scale-110 transition-transform text-xl md:text-2xl">{feature.icon}</span>
@@ -100,6 +119,7 @@ const Communication = () => {
                   </div>
                 </div>
               ))}
+              </div>
             </div>
           </div>
         </div>
@@ -185,12 +205,16 @@ const Communication = () => {
               Join 5,000+ companies building the future of customer engagement on Omronix. Get started for free today.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
-              <button className="bg-white text-primary px-10 py-4 rounded-full font-heading font-bold hover:shadow-2xl transition-all active:scale-95">
-                Create Free Account
-              </button>
-              <button className="bg-transparent border border-white text-white px-10 py-4 rounded-full font-heading font-bold hover:bg-white/10 transition-all active:scale-95">
-                Speak to an Architect
-              </button>
+              <Link to="/contact">
+                <Button size="lg" className="bg-white text-primary px-10">
+                  Create Free Account
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="secondary" size="lg" className="border-white text-white px-10">
+                  Speak to an Architect
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

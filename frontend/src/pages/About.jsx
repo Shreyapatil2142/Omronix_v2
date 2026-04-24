@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../components/shared/Hero';
 import Section, { SectionHeader } from '../components/shared/Section';
 import Card from '../components/ui/Card';
@@ -44,7 +45,7 @@ const About = () => {
 
       {/* Mission & Vision */}
       <Section variant="alt">
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           <Card className="p-10 hover:border-primary/50 transition-all group">
             <div className="w-12 h-12 rounded-lg bg-brand-gradient flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform">
               <span className="material-symbols-outlined">target</span>
@@ -109,33 +110,6 @@ const About = () => {
         </div>
       </Section>
 
-      {/* Team */}
-      <Section>
-        <SectionHeader align="center" title="Meet the Architects" />
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-          {team.map((member, idx) => (
-            <Card key={idx} className="overflow-hidden group">
-              <div className="h-64 md:h-80 bg-brand-gradient/10 relative flex items-end justify-center pt-8 border-b border-white/5">
-                <img 
-                  src={member.image} 
-                  className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-                  alt={member.name}
-                />
-              </div>
-              <div className="p-4 md:p-8 text-center">
-                <h3 className="text-lg md:text-2xl font-heading font-bold mb-1">{member.name}</h3>
-                <p className="text-primary font-heading font-bold text-[10px] md:text-sm tracking-widest uppercase mb-4 md:mb-6">{member.role}</p>
-                <div className="flex justify-center gap-2 md:gap-4">
-                  <a href="#" className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-all text-white/40 hover:text-primary border border-white/5">
-                    <span className="material-symbols-outlined text-sm md:text-lg">link</span>
-                  </a>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </Section>
-
       {/* CTA Section */}
       <Section className="px-6">
         <Card className="max-w-6xl mx-auto p-12 md:p-24 text-center relative overflow-hidden bg-gradient-to-br from-[#0A1628] to-[#0F1E35] border-primary/20">
@@ -149,8 +123,12 @@ const About = () => {
               Join the waitlist for our institutional pilot program and secure your spot in the future of trusted data exchange.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
-              <Button size="lg">Get Started Now</Button>
-              <Button variant="secondary" size="lg">Schedule a Demo</Button>
+              <Link to="/contact">
+                <Button size="lg">Get Started Now</Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="secondary" size="lg">Schedule a Demo</Button>
+              </Link>
             </div>
           </div>
         </Card>
