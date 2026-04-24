@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu } from 'lucide-react';
+import MobileMenu from './MobileMenu';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const openMenu = useCallback(() => setIsMenuOpen(true), []);
+  const closeMenu = useCallback(() => setIsMenuOpen(false), []);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-white/5">
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
@@ -12,7 +18,7 @@ const Header = () => {
           <span className="font-heading font-bold text-2xl tracking-tight">OMRONIX</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           <Link to="/blockchain" className="text-sm font-medium hover:text-primary transition-colors">Blockchain</Link>
           <Link to="/ai" className="text-sm font-medium hover:text-primary transition-colors">Agentic AI</Link>
           <Link to="/communication" className="text-sm font-medium hover:text-primary transition-colors">Communication</Link>
@@ -22,8 +28,16 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Mobile menu toggle would go here */}
+        {/* Mobile menu toggle */}
+        <button 
+          onClick={openMenu}
+          className="lg:hidden w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:text-white transition-colors"
+        >
+          <Menu size={24} />
+        </button>
       </div>
+
+      <MobileMenu isOpen={isMenuOpen} onClose={closeMenu} />
     </header>
   );
 };

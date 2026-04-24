@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className="bg-background min-h-screen font-body">
       {/* Hero Section */}
-      <header className="relative pt-20 overflow-hidden hex-bg" style={{ height: '320px' }}>
+      <header className="relative pt-12 md:pt-20 overflow-hidden hex-bg h-[240px] md:h-[320px]">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
         <div className="max-w-7xl mx-auto px-8 h-full flex flex-col justify-center relative z-10">
           <div className="flex items-center space-x-2 mb-4">
@@ -20,47 +20,46 @@ const Contact = () => {
       </header>
 
       {/* Contact Info Strip */}
-      <section className="bg-[#0A1628] py-12 relative z-20">
-        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Office Card */}
-          <div className="bg-[#0F1E35] border border-blue-500/15 p-6 rounded-xl glow-on-hover transition-all flex items-start space-x-4">
-            <div className="w-12 h-12 rounded-lg button-gradient flex items-center justify-center flex-shrink-0">
-              <span className="material-symbols-outlined text-white">location_on</span>
+      <section className="bg-[#0A1628] py-8 md:py-12 relative z-20">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="bg-[#0F1E35] border border-blue-500/15 p-4 md:p-6 rounded-xl glow-on-hover transition-all flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-3 md:gap-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg button-gradient flex items-center justify-center flex-shrink-0">
+              <span className="material-symbols-outlined text-white text-lg md:text-xl">location_on</span>
             </div>
             <div>
-              <h3 className="text-xl font-heading font-semibold text-white mb-1">Global HQ</h3>
-              <p className="text-white/60 text-sm">One Crypto Plaza, Floor 42<br />Zurich, Switzerland</p>
+              <h3 className="text-sm md:text-xl font-heading font-semibold text-white mb-1">Global HQ</h3>
+              <p className="text-white/60 text-[10px] md:text-sm">Zurich, Switzerland</p>
             </div>
           </div>
           {/* Email Card */}
-          <div className="bg-[#0F1E35] border border-blue-500/15 p-6 rounded-xl glow-on-hover transition-all flex items-start space-x-4">
-            <div className="w-12 h-12 rounded-lg button-gradient flex items-center justify-center flex-shrink-0">
-              <span className="material-symbols-outlined text-white">mail</span>
+          <div className="bg-[#0F1E35] border border-blue-500/15 p-4 md:p-6 rounded-xl glow-on-hover transition-all flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-3 md:gap-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg button-gradient flex items-center justify-center flex-shrink-0">
+              <span className="material-symbols-outlined text-white text-lg md:text-xl">mail</span>
             </div>
             <div>
-              <h3 className="text-xl font-heading font-semibold text-white mb-1">Direct Support</h3>
-              <p className="text-white/60 text-sm">hello@omronix.network<br />support@omronix.network</p>
+              <h3 className="text-sm md:text-xl font-heading font-semibold text-white mb-1">Direct Support</h3>
+              <p className="text-white/60 text-[10px] md:text-sm">hello@omronix.network</p>
             </div>
           </div>
           {/* Phone Card */}
-          <div className="bg-[#0F1E35] border border-blue-500/15 p-6 rounded-xl glow-on-hover transition-all flex items-start space-x-4">
-            <div className="w-12 h-12 rounded-lg button-gradient flex items-center justify-center flex-shrink-0">
-              <span className="material-symbols-outlined text-white">call</span>
+          <div className="bg-[#0F1E35] border border-blue-500/15 p-4 md:p-6 rounded-xl glow-on-hover transition-all flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-3 md:gap-4 col-span-2 md:col-span-1">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg button-gradient flex items-center justify-center flex-shrink-0">
+              <span className="material-symbols-outlined text-white text-lg md:text-xl">call</span>
             </div>
             <div>
-              <h3 className="text-xl font-heading font-semibold text-white mb-1">Institutional Desk</h3>
-              <p className="text-white/60 text-sm">+41 (0) 44 200 1234<br />Mon - Fri, 9am - 6pm CET</p>
+              <h3 className="text-sm md:text-xl font-heading font-semibold text-white mb-1">Institutional Desk</h3>
+              <p className="text-white/60 text-[10px] md:text-sm">+41 (0) 44 200 1234</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Content Section */}
-      <main className="bg-background py-20">
+      <main className="bg-background py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Form */}
           <div className="lg:col-span-7">
-            <div className="bg-[#0F1E35] border border-blue-500/10 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+            <div className="bg-[#0F1E35] border border-blue-500/10 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full"></div>
               <h2 className="text-3xl font-heading font-bold text-white mb-8">Send a Message</h2>
               <form className="space-y-6 relative z-10">
@@ -151,7 +150,7 @@ const Contact = () => {
       </main>
 
       {/* Map/Visual Break */}
-      <div className="h-80 w-full relative grayscale opacity-40 hover:opacity-100 transition-opacity duration-700 overflow-hidden">
+      <div className="h-48 md:h-80 w-full relative grayscale opacity-40 hover:opacity-100 transition-opacity duration-700 overflow-hidden">
         <img alt="World Map" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKliNvwR21-9y3LJZTrfB9ekU3boljnfG6K2c4L2PIKGEYxWcTVGaW6UxdhiYXcZZslLfqFe5diRgOg0P0M2FvVg799gK_qQmBoh7Qfo_mZeG-sFtWbHCcrl4zr1EMTW2UrhwN6VW4TA0MsK-pUhxqNRqT6sLpXLkVFiizldbFLNs5_lNy3xCJxG9Ee2nXXC7bVuw_AFFrkyu9tAjQfJf8CjCd4Ah35Mvno5a2OgHTJ5Cpd23fJoQFSKiyzP37P8ajSKnt-y5bwg" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-background"></div>
       </div>

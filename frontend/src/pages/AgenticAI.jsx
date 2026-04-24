@@ -57,8 +57,8 @@ const AgenticAI = () => {
           title="Beyond Chatbots — True Autonomous Intelligence"
           description="The evolution of automated business logic from static rules to self-governing intelligence."
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          <Card className="p-8 opacity-60">
+        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 md:gap-8 items-center">
+          <Card className="p-8 opacity-60 order-2 lg:order-1 w-full">
             <h4 className="text-xl font-heading font-bold mb-6 text-white/80">Traditional Automation</h4>
             <ul className="space-y-4">
               <li className="flex items-center text-sm text-white/40 italic"><span className="mr-2">✕</span> Fixed if-then rules</li>
@@ -67,7 +67,7 @@ const AgenticAI = () => {
             </ul>
           </Card>
           
-          <Card className="p-10 border-primary/50 shadow-[0_0_40px_rgba(37,99,235,0.15)] relative scale-105 z-10">
+          <Card className="p-10 border-primary/50 shadow-[0_0_40px_rgba(37,99,235,0.15)] relative scale-105 z-10 order-1 lg:order-2 w-full">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-background px-4 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase">RECOMMENDED</div>
             <h4 className="text-2xl font-heading font-bold mb-6 text-white">Omronix Agentic AI</h4>
             <ul className="space-y-4">
@@ -77,7 +77,7 @@ const AgenticAI = () => {
             </ul>
           </Card>
 
-          <Card className="p-8 opacity-80">
+          <Card className="p-8 opacity-80 order-3 lg:order-3 w-full">
             <h4 className="text-xl font-heading font-bold mb-6 text-white/90">Basic Chatbots</h4>
             <ul className="space-y-4">
               <li className="flex items-center text-sm text-white/60"><span className="mr-2 text-yellow-500">!</span> Passive response only</li>
@@ -95,7 +95,7 @@ const AgenticAI = () => {
           subtitle="SYSTEM FEATURES"
           title="Advanced Architectural Core"
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {capabilities.map((cap, idx) => (
             <Card key={idx} className="p-8 group">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-background transition-colors">
@@ -119,9 +119,9 @@ const AgenticAI = () => {
           title="The Loop of Intelligence"
           className="relative z-10"
         />
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="relative z-10 flex overflow-x-auto pb-8 -mx-6 px-6 md:mx-0 md:px-0 md:grid md:grid-cols-3 lg:grid-cols-5 gap-8 no-scrollbar">
           {steps.map((step, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center">
+            <div key={idx} className="flex flex-col items-center text-center min-w-[200px] md:min-w-0">
               <div className={`w-16 h-16 rounded-full bg-surface-card border-2 border-primary flex items-center justify-center text-primary font-heading font-bold mb-6 shadow-[0_0_20px_rgba(37,99,235,0.2)]`}>
                 {step.number}
               </div>
@@ -134,12 +134,12 @@ const AgenticAI = () => {
 
       {/* Use Cases */}
       <Section>
-        <div className="flex flex-wrap gap-8 border-b border-white/5 mb-16 justify-center md:justify-start">
+        <div className="flex overflow-x-auto whitespace-nowrap border-b border-white/5 mb-12 md:mb-16 no-scrollbar -mx-6 px-6 md:mx-0 md:px-0 gap-8">
           {['Customer Service', 'Sales', 'Operations', 'Finance', 'Healthcare'].map((tab) => (
             <button 
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`pb-4 px-2 font-heading font-bold text-sm uppercase tracking-widest transition-all ${activeTab === tab ? 'text-primary border-b-2 border-primary' : 'text-white/40 border-b-2 border-transparent hover:text-white'}`}
+              className={`pb-4 font-heading font-bold text-xs md:text-sm uppercase tracking-widest transition-all ${activeTab === tab ? 'text-primary border-b-2 border-primary' : 'text-white/40 border-b-2 border-transparent hover:text-white'}`}
             >
               {tab}
             </button>
@@ -172,9 +172,12 @@ const AgenticAI = () => {
                 </li>
               ))}
             </ul>
-            <Card className="inline-block bg-primary/5 border-primary/20 p-6">
-              <div className="text-4xl font-heading font-black text-white">87%</div>
-              <div className="text-xs font-heading font-bold text-primary tracking-widest uppercase mt-1">Reduction in response time</div>
+            <Card className="flex items-center gap-6 bg-primary/5 border-primary/20 p-6 md:p-8">
+              <div className="text-4xl md:text-5xl font-heading font-black text-white">87%</div>
+              <div>
+                <div className="text-[10px] md:text-xs font-heading font-bold text-primary tracking-widest uppercase mb-1">Success Metric</div>
+                <div className="text-white/60 text-xs md:text-sm">Reduction in response time</div>
+              </div>
             </Card>
           </div>
         </div>

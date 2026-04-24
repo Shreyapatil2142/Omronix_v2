@@ -23,8 +23,8 @@ const Home = () => {
       />
 
       {/* About Section */}
-      <Section variant="alt">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <Section variant="alt" className="py-12 md:py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
             <Card blur="lg" className="p-2 group overflow-hidden">
               <img 
@@ -40,20 +40,20 @@ const Home = () => {
               title="Architecting the Future of Private Data Transmission"
               description="Omronix was founded with a singular vision: to unify the agility of CPaaS with the immutable security of blockchain. We enable businesses to transmit sensitive data with zero compromise on speed or reliability."
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <div className="grid grid-cols-2 gap-4 md:gap-8 mb-10">
               {[
                 { title: 'Founded 2024', desc: 'Visionary Beginnings' },
                 { title: 'Launching 2025', desc: 'Phase One Rollout' },
                 { title: 'Blockchain-Secured', desc: 'End-to-end encryption' },
                 { title: 'AI-Powered', desc: 'Automated Routing' }
               ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                <div key={idx} className="flex flex-col md:flex-row items-start gap-3 md:gap-4">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-white">{item.title}</h4>
-                    <p className="text-white/40 text-sm">{item.desc}</p>
+                    <h4 className="font-heading font-bold text-white text-xs md:text-base">{item.title}</h4>
+                    <p className="text-white/40 text-[10px] md:text-sm">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -64,13 +64,13 @@ const Home = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section>
+      <Section className="py-12 md:py-24">
         <SectionHeader 
           align="center"
           title="Unmatched Enterprise Infrastructure"
           description="Engineered to meet the highest standards of global communication protocols and cryptographic security."
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-4 md:gap-6">
           {[
             { 
               title: 'Compliance First', 
@@ -93,24 +93,24 @@ const Home = () => {
               color: 'text-primary'
             }
           ].map((feature, idx) => (
-            <Card key={idx} className="p-8 group hover:translate-y-[-4px]">
-              <div className={`w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 ${feature.color}`}>
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            <Card key={idx} className="p-4 md:p-8 group hover:translate-y-[-4px]">
+              <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 md:mb-6 ${feature.color}`}>
+                <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
               </div>
-              <h3 className="text-2xl font-heading font-bold mb-3">{feature.title}</h3>
-              <p className="text-white/60 leading-relaxed">{feature.desc}</p>
+              <h3 className="text-lg md:text-2xl font-heading font-bold mb-2 md:mb-3">{feature.title}</h3>
+              <p className="text-white/60 text-xs md:text-base leading-relaxed">{feature.desc}</p>
             </Card>
           ))}
         </div>
       </Section>
 
       {/* Services Section */}
-      <Section variant="alt">
+      <Section variant="alt" className="py-12 md:py-24">
         <SectionHeader 
           title="Our Service Ecosystem"
           description="Core pillars of the Omronix technology stack."
         />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
           {[
             { 
               title: 'Communication', 
@@ -131,15 +131,15 @@ const Home = () => {
               color: 'from-tertiary to-tertiary-container'
             }
           ].map((service, idx) => (
-            <Card key={idx} className="p-8 flex flex-col h-full group">
-              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-8 shadow-lg`}>
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+            <Card key={idx} className="p-4 md:p-8 flex flex-col h-full group">
+              <div className={`w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 md:mb-8 shadow-lg`}>
+                <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
               </div>
-              <h3 className="text-2xl font-heading font-bold mb-4">{service.title}</h3>
-              <p className="text-white/50 mb-8 flex-grow">{service.desc}</p>
-              <a href="#" className="text-primary font-bold inline-flex items-center group-hover:gap-3 transition-all">
+              <h3 className="text-lg md:text-2xl font-heading font-bold mb-2 md:mb-4">{service.title}</h3>
+              <p className="text-white/50 text-xs md:text-base mb-4 md:mb-8 flex-grow">{service.desc}</p>
+              <a href="#" className="text-primary text-xs md:text-base font-bold inline-flex items-center group-hover:gap-3 transition-all">
                 Learn More 
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                <svg className="w-4 h-4 md:w-5 md:h-5 ml-1 md:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </a>
             </Card>
           ))}

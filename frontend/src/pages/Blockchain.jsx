@@ -26,7 +26,7 @@ const Blockchain = () => {
       />
 
       {/* Solutions Strip */}
-      <section className="py-16 bg-[#0A1628] border-y border-white/5">
+      <section className="py-12 md:py-16 bg-[#0A1628] border-y border-white/5">
         <div className="container mx-auto px-6 max-w-7xl">
           <h2 className="text-3xl font-heading font-bold text-center text-white mb-12">End-to-End Blockchain Services</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
@@ -50,39 +50,39 @@ const Blockchain = () => {
       </section>
 
       {/* Blockchain Architecture Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-24">
         <div className="container mx-auto px-6 max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative h-[500px] flex items-center justify-center">
+          <div className="relative h-[300px] md:h-[500px] flex items-center justify-center scale-75 md:scale-100">
             {/* Stacked Architecture Visual */}
-            <div className="absolute top-0 left-0 w-64 h-48 glass-card rounded-2xl border-primary/30 p-6 -rotate-6 transform hover:scale-105 transition-transform">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="material-symbols-outlined text-primary">public</span>
-                <span className="font-bold text-white">Public</span>
+            <div className="absolute top-0 left-0 w-48 md:w-64 h-32 md:h-48 glass-card rounded-2xl border-primary/30 p-4 md:p-6 -rotate-6 transform hover:scale-105 transition-transform">
+              <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
+                <span className="material-symbols-outlined text-primary text-sm md:text-base">public</span>
+                <span className="font-bold text-white text-xs md:text-base">Public</span>
               </div>
               <div className="h-1 bg-primary/20 rounded-full w-full mb-2">
                 <div className="h-full bg-primary rounded-full w-4/5"></div>
               </div>
-              <p className="text-[10px] text-slate-400">Permissionless, transparent network for global decentralization.</p>
+              <p className="text-[8px] md:text-[10px] text-slate-400">Permissionless, transparent network for global decentralization.</p>
             </div>
-            <div className="absolute top-1/3 left-1/4 w-64 h-48 glass-card rounded-2xl border-secondary/30 p-6 rotate-2 z-10 scale-110 shadow-2xl">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="material-symbols-outlined text-secondary">vpn_lock</span>
-                <span className="font-bold text-white">Private</span>
+            <div className="absolute top-1/4 left-1/4 w-48 md:w-64 h-32 md:h-48 glass-card rounded-2xl border-secondary/30 p-4 md:p-6 rotate-2 z-10 scale-110 shadow-2xl">
+              <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
+                <span className="material-symbols-outlined text-secondary text-sm md:text-base">vpn_lock</span>
+                <span className="font-bold text-white text-xs md:text-base">Private</span>
               </div>
               <div className="h-1 bg-secondary/20 rounded-full w-full mb-2">
                 <div className="h-full bg-secondary rounded-full w-3/5"></div>
               </div>
-              <p className="text-[10px] text-slate-400">High-performance permissioned systems for internal compliance.</p>
+              <p className="text-[8px] md:text-[10px] text-slate-400">High-performance permissioned systems for internal compliance.</p>
             </div>
-            <div className="absolute bottom-10 right-0 w-64 h-48 glass-card rounded-2xl border-primary/30 p-6 rotate-12 transform hover:scale-105 transition-transform">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="material-symbols-outlined text-primary">groups</span>
-                <span className="font-bold text-white">Consortium</span>
+            <div className="absolute bottom-4 right-0 w-48 md:w-64 h-32 md:h-48 glass-card rounded-2xl border-primary/30 p-4 md:p-6 rotate-12 transform hover:scale-105 transition-transform">
+              <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
+                <span className="material-symbols-outlined text-primary text-sm md:text-base">groups</span>
+                <span className="font-bold text-white text-xs md:text-base">Consortium</span>
               </div>
               <div className="h-1 bg-primary/20 rounded-full w-full mb-2">
                 <div className="h-full bg-primary rounded-full w-2/5"></div>
               </div>
-              <p className="text-[10px] text-slate-400">Collaborative networks for multi-organizational governance.</p>
+              <p className="text-[8px] md:text-[10px] text-slate-400">Collaborative networks for multi-organizational governance.</p>
             </div>
           </div>
           <div>
@@ -110,7 +110,7 @@ const Blockchain = () => {
       </section>
 
       {/* Tokenization Section */}
-      <section className="py-24 bg-[#0A1628]">
+      <section className="py-12 md:py-24 bg-[#0A1628]">
         <div className="container mx-auto px-6 max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
             <h2 className="text-4xl font-heading font-bold text-white mb-8 leading-tight">Convert Real-World Assets into Digital Tokens</h2>
@@ -153,7 +153,7 @@ const Blockchain = () => {
       </section>
 
       {/* Smart Contracts IDE Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-24">
         <div className="container mx-auto px-6 max-w-7xl grid lg:grid-cols-2 gap-16">
           <div className="glass-card rounded-xl border-slate-700 overflow-hidden shadow-2xl">
             <div className="bg-[#1e293b] px-4 py-2 flex items-center gap-2 border-b border-slate-700">
@@ -164,7 +164,7 @@ const Blockchain = () => {
               </div>
               <span className="text-[10px] text-slate-400 ml-4 font-mono uppercase tracking-widest">secure_vault.sol</span>
             </div>
-            <div className="p-6 font-mono text-sm leading-relaxed overflow-x-auto bg-[#0d1117]">
+            <div className="p-4 md:p-6 font-mono text-[10px] md:text-sm leading-relaxed overflow-x-auto bg-[#0d1117] no-scrollbar">
               <p><span className="text-secondary">pragma</span> solidity ^0.8.0;</p>
               <p className="mt-2"><span className="text-primary">contract</span> OmronixVault {'{'}</p>
               <p className="ml-4 text-slate-400">mapping(address =&gt; uint) public balances;</p>
@@ -214,11 +214,11 @@ const Blockchain = () => {
       </section>
 
       {/* Enterprise Section */}
-      <section className="py-24 bg-[#0A1628]">
+      <section className="py-12 md:py-24 bg-[#0A1628]">
         <div className="container mx-auto px-6 max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
             <h2 className="text-4xl font-heading font-bold text-white mb-6 leading-tight">Blockchain for Enterprise Operations</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
               {[
                 { title: 'Strategy Consulting', desc: 'Roadmap development and feasibility studies for Fortune 500 integration.', color: 'primary' },
                 { title: 'Legacy Integration', desc: 'Bridge existing ERP systems (SAP, Oracle) with decentralized ledgers.', color: 'secondary' },
@@ -243,10 +243,10 @@ const Blockchain = () => {
       </section>
 
       {/* BaaS Section */}
-      <section className="py-24">
+      <section className="py-12 md:py-24">
         <div className="container mx-auto px-6 max-w-7xl">
           <h2 className="text-4xl font-heading font-bold text-center text-white mb-16">Deploy Without Managing Infrastructure</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
             {[
               { 
                 title: 'R3 Corda', 
@@ -308,20 +308,20 @@ const Blockchain = () => {
       </section>
 
       {/* Logo Grid */}
-      <section className="py-20 bg-[#0A1628] border-t border-white/5">
+      <section className="py-12 md:py-20 bg-[#0A1628] border-t border-white/5">
         <div className="container mx-auto px-6 max-w-7xl text-center">
-          <h2 className="text-3xl font-heading font-bold text-white mb-12">Built on Industry-Leading Blockchain Technologies</h2>
-          <div className="flex flex-wrap justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
+          <h2 className="text-xl md:text-3xl font-heading font-bold text-white mb-8 md:mb-12 uppercase tracking-widest opacity-50">Ecosystem Foundations</h2>
+          <div className="flex overflow-x-auto gap-4 md:gap-8 pb-4 no-scrollbar justify-start md:justify-center">
             {[
               { name: 'Ethereum', color: 'bg-blue-500' },
               { name: 'Polygon', color: 'bg-purple-500' },
               { name: 'Solana', color: 'bg-teal-500' },
               { name: 'Bitcoin', color: 'bg-orange-500' },
-              { name: 'Binance Chain', color: 'bg-yellow-500' },
+              { name: 'Binance', color: 'bg-yellow-500' },
               { name: 'Avalanche', color: 'bg-red-500' },
             ].map((tech) => (
-              <span key={tech.name} className="px-6 py-3 glass-card rounded-full font-bold text-white flex items-center gap-2">
-                <span className={`w-4 h-4 rounded-full ${tech.color}`}></span> {tech.name}
+              <span key={tech.name} className="px-4 md:px-6 py-2 md:py-3 glass-card rounded-full font-bold text-white flex items-center gap-2 whitespace-nowrap text-xs md:text-base">
+                <span className={`w-2 h-2 md:w-4 md:h-4 rounded-full ${tech.color}`}></span> {tech.name}
               </span>
             ))}
           </div>

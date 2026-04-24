@@ -44,7 +44,7 @@ const About = () => {
 
       {/* Mission & Vision */}
       <Section variant="alt">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8">
           <Card className="p-10 hover:border-primary/50 transition-all group">
             <div className="w-12 h-12 rounded-lg bg-brand-gradient flex items-center justify-center mb-6 text-white group-hover:scale-110 transition-transform">
               <span className="material-symbols-outlined">target</span>
@@ -73,16 +73,17 @@ const About = () => {
         <SectionHeader align="center" title="Our Journey" />
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 -translate-x-1/2 h-full w-[1px] bg-gradient-to-b from-primary via-secondary to-transparent hidden md:block opacity-20"></div>
+          <div className="absolute left-4 md:left-1/2 -translate-x-1/2 h-full w-[1px] bg-gradient-to-b from-primary via-secondary to-transparent opacity-20"></div>
           
-          <div className="space-y-16">
+          <div className="space-y-12 md:space-y-16">
             {milestones.map((m, idx) => (
-              <div key={idx} className={`flex flex-col md:flex-row items-center w-full ${m.side === 'left' ? 'md:justify-start' : 'md:justify-end'}`}>
-                <div className={`w-full md:w-1/2 ${m.side === 'left' ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
-                  <Card className="p-8 inline-block max-w-md hover:border-primary/40">
-                    <span className="text-primary font-heading font-bold text-sm block mb-1 tracking-widest">{m.year}</span>
-                    <h3 className="text-2xl font-heading font-bold mb-3">{m.title}</h3>
-                    <p className="text-white/40 text-sm leading-relaxed">{m.desc}</p>
+              <div key={idx} className={`flex flex-col md:flex-row items-start md:items-center w-full ${m.side === 'left' ? 'md:justify-start' : 'md:justify-end'}`}>
+                <div className={`w-full md:w-1/2 pl-10 md:pl-0 ${m.side === 'left' ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
+                  <Card className="p-6 md:p-8 inline-block max-w-md hover:border-primary/40 relative">
+                    <div className="md:hidden absolute -left-10 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10"></div>
+                    <span className="text-primary font-heading font-bold text-xs md:text-sm block mb-1 tracking-widest">{m.year}</span>
+                    <h3 className="text-xl md:text-2xl font-heading font-bold mb-2 md:mb-3">{m.title}</h3>
+                    <p className="text-white/40 text-xs md:text-sm leading-relaxed">{m.desc}</p>
                   </Card>
                 </div>
                 <div className="w-4 h-4 rounded-full bg-primary absolute left-1/2 -translate-x-1/2 hidden md:block border-4 border-background z-10 shadow-[0_0_10px_rgba(37,99,235,0.5)]"></div>
@@ -95,7 +96,7 @@ const About = () => {
       {/* Core Values */}
       <Section variant="alt">
         <SectionHeader align="center" title="Our Values" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {values.map((v, idx) => (
             <div key={idx} className="text-center group">
               <div className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-all border border-white/5 group-hover:border-primary/30 shadow-2xl">
@@ -111,22 +112,22 @@ const About = () => {
       {/* Team */}
       <Section>
         <SectionHeader align="center" title="Meet the Architects" />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {team.map((member, idx) => (
             <Card key={idx} className="overflow-hidden group">
-              <div className="h-80 bg-brand-gradient/10 relative flex items-end justify-center pt-8 border-b border-white/5">
+              <div className="h-64 md:h-80 bg-brand-gradient/10 relative flex items-end justify-center pt-8 border-b border-white/5">
                 <img 
                   src={member.image} 
                   className="h-full w-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
                   alt={member.name}
                 />
               </div>
-              <div className="p-8 text-center">
-                <h3 className="text-2xl font-heading font-bold mb-1">{member.name}</h3>
-                <p className="text-primary font-heading font-bold text-sm tracking-widest uppercase mb-6">{member.role}</p>
-                <div className="flex justify-center gap-4">
-                  <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-all text-white/40 hover:text-primary border border-white/5">
-                    <span className="material-symbols-outlined text-lg">link</span>
+              <div className="p-4 md:p-8 text-center">
+                <h3 className="text-lg md:text-2xl font-heading font-bold mb-1">{member.name}</h3>
+                <p className="text-primary font-heading font-bold text-[10px] md:text-sm tracking-widest uppercase mb-4 md:mb-6">{member.role}</p>
+                <div className="flex justify-center gap-2 md:gap-4">
+                  <a href="#" className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 transition-all text-white/40 hover:text-primary border border-white/5">
+                    <span className="material-symbols-outlined text-sm md:text-lg">link</span>
                   </a>
                 </div>
               </div>

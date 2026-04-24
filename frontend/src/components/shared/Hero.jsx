@@ -44,26 +44,34 @@ const Hero = ({
           </div>
           
           {stats.length > 0 && (
-            <div className="flex gap-8 pt-8 border-t border-white/5">
+            <div className="flex overflow-x-auto md:overflow-visible gap-8 pt-8 border-t border-white/5 no-scrollbar pb-4 md:pb-0">
               {stats.map((stat, idx) => (
-                <div key={idx} className="flex flex-col">
-                  <span className="text-2xl font-heading font-bold text-primary">{stat.value}</span>
-                  <span className="text-xs font-heading font-bold text-white/40 tracking-widest uppercase">{stat.label}</span>
+                <div key={idx} className="flex flex-col min-w-[100px] md:min-w-0">
+                  <span className="text-xl md:text-2xl font-heading font-bold text-primary">{stat.value}</span>
+                  <span className="text-[10px] md:text-xs font-heading font-bold text-white/40 tracking-widest uppercase whitespace-nowrap">{stat.label}</span>
                 </div>
               ))}
             </div>
           )}
         </div>
         
-        <div className="relative hidden lg:block">
-          <div className="absolute -inset-10 bg-primary/5 rounded-full blur-[80px]"></div>
-          <div className="relative z-10 p-2 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-3xl rotate-2 hover:rotate-0 transition-transform duration-700">
-            <img 
-              src={imageSrc} 
-              alt="Dashboard Mockup" 
-              className="rounded-xl shadow-2xl border border-white/5"
-            />
+        <div className="relative hidden lg:block perspective-1000">
+          <div className="absolute -inset-20 bg-primary/10 rounded-full blur-[100px] animate-pulse"></div>
+          <div className="relative z-10 p-1 rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-3xl transition-all duration-700 hover:rotate-0 hover:scale-[1.02] cursor-pointer group shadow-2xl"
+               style={{ transform: 'rotateX(4deg) rotateY(-8deg) rotateZ(1deg)' }}>
+            <div className="rounded-[2.2rem] overflow-hidden border border-white/10 relative h-[450px]">
+              <img 
+                src={imageSrc} 
+                alt="Omronix Interface" 
+                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent opacity-60"></div>
+            </div>
           </div>
+          
+          {/* Floating Accents */}
+          <div className="absolute -top-10 -right-10 w-32 h-32 bg-secondary/20 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         </div>
       </div>
     </section>
