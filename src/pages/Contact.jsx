@@ -62,20 +62,20 @@ const Contact = () => {
             <div className="bg-surface-card border border-border rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full"></div>
               <h2 className="text-3xl font-heading font-bold text-text-primary mb-8">Send a Message</h2>
-              <form className="space-y-6 relative z-10">
+              <form action="https://formspree.io/f/xvzdnpqn" method="POST" className="space-y-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-[10px] font-heading font-bold text-text-muted px-1 tracking-widest uppercase">Full Name</label>
-                    <input className="w-full bg-surface-dim border border-border rounded-lg p-4 text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-text-muted" placeholder="John Doe" type="text" />
+                    <input name="name" className="w-full bg-surface-dim border border-border rounded-lg p-4 text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-text-muted" placeholder="John Doe" type="text" required />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-heading font-bold text-text-muted px-1 tracking-widest uppercase">Email Address</label>
-                    <input className="w-full bg-surface-dim border border-border rounded-lg p-4 text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-text-muted" placeholder="john@example.com" type="email" />
+                    <input name="email" className="w-full bg-surface-dim border border-border rounded-lg p-4 text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-text-muted" placeholder="john@example.com" type="email" required />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-heading font-bold text-text-muted px-1 tracking-widest uppercase">Subject of Interest</label>
-                  <select className="w-full bg-surface-dim border border-border rounded-lg p-4 text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+                  <select name="subject" className="w-full bg-surface-dim border border-border rounded-lg p-4 text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
                     <option>Institutional Node Hosting</option>
                     <option>Developer Partnership</option>
                     <option>Media Inquiry</option>
@@ -84,9 +84,9 @@ const Contact = () => {
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-heading font-bold text-text-muted px-1 tracking-widest uppercase">Your Message</label>
-                  <textarea className="w-full bg-surface-dim border border-border rounded-lg p-4 text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-text-muted" placeholder="How can we help your team?" rows="5"></textarea>
+                  <textarea name="message" className="w-full bg-surface-dim border border-border rounded-lg p-4 text-text-primary focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-text-muted" placeholder="How can we help your team?" rows="5" required></textarea>
                 </div>
-                <Button className="w-full button-gradient py-4 rounded-lg text-lg font-bold hover:brightness-110 shadow-[0_4px_20px_rgba(37,99,235,0.3)] text-white">
+                <Button type="submit" className="w-full button-gradient py-4 rounded-lg text-lg font-bold hover:brightness-110 shadow-[0_4px_20px_rgba(37,99,235,0.3)] text-white">
                   Initialize Contact Sequence
                 </Button>
               </form>

@@ -17,7 +17,7 @@ const Blockchain = () => {
         }
         description="Our decentralized solutions empower enterprises to streamline operations, secure transactions, and unlock new digital asset potential with production-ready blockchain architecture."
         primaryBtnText="Launch Project"
-        secondaryBtnText="View Documentation"
+        primaryLink="/contact"
         imageSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuBcXp-dZs1EEpBwH0BdKcmVoH7AEZcEHgIKQzXiy-gcwNwflHCHb0u5pW64BgRYtEYr_yaW9k6AvupCgQoL_2Y4BhLjnEcvC8oKdobtyJHbNBhKSsoOoMEMUonGdxdBIomZhVjFHyunqsrKr0_yjyFyNh_5HVUcpD7C1dIrIztHPBUljPAN6bLaF-df9fAABatAoGmMjOLO0EEP9nInci6sHr6GlARWrmgW3ia4_YM1SJxjsrZ6_VX334jOdveDQr1NpF0Em1DfCQ"
         stats={[
           { label: 'Security', value: '100%' },

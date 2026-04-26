@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from '../ui/Button';
+import { Link } from 'react-router-dom';
 
-const Hero = ({ badge, title, description, primaryBtnText, secondaryBtnText, stats, imageSrc }) => {
+const Hero = ({ badge, title, description, primaryBtnText, secondaryBtnText, stats, imageSrc, primaryLink, secondaryLink }) => {
   return (
     <section className="relative pt-10 pb-10 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -21,8 +22,24 @@ bg-clip-text text-transparent bg-gradient-to-r from-accent-blue to-accent-cyan">
               {description}
             </p>
             <div className="flex flex-wrap gap-4 mb-12">
-              <Button variant="primary" size="lg">{primaryBtnText}</Button>
-              <Button variant="secondary" size="lg">{secondaryBtnText}</Button>
+              {primaryBtnText && (
+                primaryLink ? (
+                  <Link to={primaryLink}>
+                    <Button variant="primary" size="lg">{primaryBtnText}</Button>
+                  </Link>
+                ) : (
+                  <Button variant="primary" size="lg">{primaryBtnText}</Button>
+                )
+              )}
+              {secondaryBtnText && (
+                secondaryLink ? (
+                  <Link to={secondaryLink}>
+                    <Button variant="secondary" size="lg">{secondaryBtnText}</Button>
+                  </Link>
+                ) : (
+                  <Button variant="secondary" size="lg">{secondaryBtnText}</Button>
+                )
+              )}
             </div>
             {stats && (
               <div className="flex gap-12 py-8 border-t border-border">

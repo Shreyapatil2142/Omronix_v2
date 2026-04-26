@@ -34,7 +34,9 @@ const About = () => {
         title="Building the Future of Trusted Communication"
         description="Omronix is architecting the next generation of secure, decentralized communication protocols for enterprise-grade applications and sovereign digital identities."
         primaryBtnText="EXPLORE SERVICES"
+        primaryLink="/#services"
         secondaryBtnText="GET IN TOUCH"
+        secondaryLink="/contact"
         stats={[
           { label: 'FOUNDED', value: '2024' },
           { label: 'CORE SERVICES', value: '3+' },
@@ -139,15 +141,6 @@ const About = () => {
                 </Button>
               </Link>
 
-              <Link to="/contact">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="border border-white text-white px-10 hover:bg-white/10 transition"
-                >
-                  Schedule a Demo
-                </Button>
-              </Link>
             </div>
 
           </div>

@@ -15,7 +15,7 @@ const Home = () => {
         title="Empowering Business with Decentralized Communication"
         description="Scale your enterprise communication with unbreakable security and automated intelligence. Built on high-performance blockchain for the era of sovereign data."
         primaryBtnText="EXPLORE SOLUTIONS"
-        secondaryBtnText="DOCUMENTATION"
+        primaryLink="/#services"
         stats={[
           { label: 'Uptime', value: '99.99%' },
           { label: 'Messages', value: '10M+' },
@@ -109,7 +109,7 @@ const Home = () => {
       </Section>
 
       {/* Services Section */}
-      <Section variant="alt" className="py-8 md:py-20">
+      <Section id="services" variant="alt" className="py-8 md:py-20">
         <SectionHeader 
           title="Our Service Ecosystem"
           description="Core pillars of the Omronix technology stack."
@@ -120,19 +120,22 @@ const Home = () => {
               title: 'Communication', 
               desc: 'Advanced CPaaS solutions including programmable SMS, voice, and secure chat APIs for global enterprises.',
               icon: 'forum',
-              color: 'from-primary to-primary-container'
+              color: 'from-primary to-primary-container',
+              path: '/communication'
             },
             { 
               title: 'Blockchain', 
               desc: 'Decentralized ledgers for message verification, secure audit trails, and automated smart-contract logic.',
               icon: 'token',
-              color: 'from-secondary to-secondary-container'
+              color: 'from-secondary to-secondary-container',
+              path: '/blockchain'
             },
             { 
               title: 'Agentic AI', 
               desc: 'Next-gen autonomous agents that handle complex customer interactions and network optimizations with human-like precision.',
               icon: 'robot_2',
-              color: 'from-accent-blue to-accent-cyan'
+              color: 'from-accent-blue to-accent-cyan',
+              path: '/ai'
             }
           ].map((service, idx) => (
             <Card key={idx} className="p-4 md:p-8 flex flex-col h-full group">
@@ -141,7 +144,7 @@ const Home = () => {
               </div>
               <h3 className="text-lg md:text-2xl text-primary font-bold mb-2 md:mb-4">{service.title}</h3>
               <p className="text-text-secondary text-xs md:text-base mb-4 md:mb-8 flex-grow">{service.desc}</p>
-              <Link to="/contact" className="text-primary text-xs md:text-base font-bold inline-flex items-center group-hover:gap-3 transition-all">
+              <Link to={service.path} className="text-primary text-xs md:text-base font-bold inline-flex items-center group-hover:gap-3 transition-all">
                 Learn More 
                 <svg className="w-4 h-4 md:w-5 md:h-5 ml-1 md:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>

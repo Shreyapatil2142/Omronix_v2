@@ -28,7 +28,9 @@ const Communication = () => {
         title="Seamlessly Connect, Engage, and Grow"
         description="Scale your global communications with our enterprise-grade CPaaS. High-deliverability APIs for SMS, Voice, and WhatsApp designed for developers who demand security and performance."
         primaryBtnText="Start Integrating Now"
+        primaryLink="/contact"
         secondaryBtnText="Talk to Sales"
+        secondaryLink="/contact"
         stats={[
           { label: 'UPTIME', value: '99.99%' },
           { label: 'DELIVERY', value: 'Instant' },
@@ -180,11 +182,6 @@ const Communication = () => {
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Link to="/contact">
                 <Button size="lg" className="bg-white text-primary px-10">
-                  Create Free Account
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="secondary" size="lg" className="border-white text-white px-10">
                   Speak to an Architect
                 </Button>
               </Link>

@@ -33,7 +33,7 @@ const AgenticAI = () => {
         title={<span>AI Agents That <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Act, Adapt, and Innovate</span> Independently</span>}
         description="Deploy self-learning AI agents that automate operations, enhance decision-making, and drive business efficiency across your digital ecosystem."
         primaryBtnText="DEPLOY AN AI AGENT"
-        secondaryBtnText="BOOK DEMO"
+        primaryLink="/contact"
         stats={[
           { label: 'Decisions/sec', value: '1,247' },
           { label: 'Uptime', value: '24/7' },
@@ -220,16 +220,6 @@ const AgenticAI = () => {
               <Link to="/contact">
                 <Button size="lg" className="bg-white text-primary px-10 hover:bg-white/90 transition">
                   DEPLOY AN AI AGENT
-                </Button>
-              </Link>
-
-              <Link to="/contact">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="border border-white text-white px-10 hover:bg-white/10 transition"
-                >
-                  BOOK A DEMO
                 </Button>
               </Link>
             </div>
