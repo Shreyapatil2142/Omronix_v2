@@ -12,9 +12,14 @@ const menuItems = [
 const MobileMenu = ({ isOpen, onClose }) => {
   const location = useLocation();
 
+  const prevPathname = React.useRef(location.pathname);
+
   useEffect(() => {
-    onClose();
-  }, [location.pathname, onClose]);
+    if (isOpen && location.pathname !== prevPathname.current) {
+      onClose();
+    }
+    prevPathname.current = location.pathname;
+  }, [location.pathname, isOpen, onClose]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -42,14 +47,14 @@ const MobileMenu = ({ isOpen, onClose }) => {
       <button
         type="button"
         onClick={onClose}
-        className={`absolute inset-0 w-full h-full bg-text-primary/10 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`absolute inset-0 w-full h-full bg-slate-900/40 backdrop-blur-[2px] transition-opacity duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-0'
         }`}
         aria-label="Close mobile menu overlay"
       />
 
       <aside
-        className={`absolute top-0 right-0 h-full w-[86%] max-w-sm bg-background border-l border-border shadow-2xl transition-transform duration-300 ease-out ${
+        className={`absolute top-0 right-0 h-full w-[85%] max-w-[320px] bg-white border-l border-border shadow-2xl transition-transform duration-300 ease-out z-[110] ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-label="Mobile navigation"
