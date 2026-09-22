@@ -20,6 +20,7 @@ const Header = () => {
         { name: 'Blockchain', path: '/blockchain' },
         { name: 'Agentic AI', path: '/ai' },
         { name: 'Communication', path: '/communication' },
+        { name: 'Demos', path: '/demos' },
         { name: 'About', path: '/about' },
     ];
 

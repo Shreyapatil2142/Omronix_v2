@@ -6,6 +6,7 @@ const menuItems = [
   { name: 'Blockchain', path: '/blockchain' },
   { name: 'Agentic AI', path: '/ai' },
   { name: 'Communication', path: '/communication' },
+  { name: 'Demos', path: '/demos' },
   { name: 'About Us', path: '/about' },
 ];
 

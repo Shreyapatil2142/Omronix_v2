@@ -8,6 +8,7 @@ import Communication from './pages/Communication';
 import Blockchain from './pages/Blockchain';
 import Contact from './pages/Contact';
 import About from './pages/About';
+import Demos from './pages/Demos';
 
 // Scroll to Hash Implementation
 const ScrollToHash = () => {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/blockchain" element={<Blockchain />} />
           <Route path="/ai" element={<AgenticAI />} />
           <Route path="/communication" element={<Communication />} />
+          <Route path="/demos" element={<Demos />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
