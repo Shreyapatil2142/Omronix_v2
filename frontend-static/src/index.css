@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F6B6E;
+  --color-nav: #14262B;
+  --color-canvas: #F4F3EE;
+  --color-card: #FFFFFF;
+  
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'IBM Plex Serif', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #E9E7E0;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  color: #1A1D21;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+a { color: #0F6B6E; }
+button, textarea { font-family: inherit; }
+
+/* Status styles matching reference HTML */
+.st {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.st::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.s-pass { background: #E3F1E7; color: #1E6B3A; }
+.s-check { background: #FCEFD9; color: #8A4B08; }
+.s-fail { background: #FBE4E2; color: #A61B1B; }
+.s-auto { background: #E8F1F0; color: #0A4F52; }
+.s-person { background: #E3ECFA; color: #1D4E9E; }
+.s-done { background: #CFE8D8; color: #0E5A36; }
+.s-chg { background: #EEE5F8; color: #5B2E91; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 7px;
+  border: 1px solid #CFCBC0;
+  background: #FFFFFF;
+  color: #1A1D21;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.btn:hover { background: #F4F3EE; color: #1A1D21; }
+.btn.pri { background: #0F6B6E; border-color: #0F6B6E; color: #FFFFFF; }
+.btn.pri:hover { background: #0A5558; color: #FFFFFF; }
+.btn.on { background: #14262B; border-color: #14262B; color: #FFFFFF; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E4E2DA;
+  border-radius: 12px;
+}
+.h1 {
+  font-family: 'IBM Plex Serif', Georgia, serif;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0;
+}
+.lead {
+  font-size: 16px;
+  color: #4A4F57;
+  margin: 0;
+  line-height: 1.5;
+}
+.ct {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+.lbl {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6B7079;
+}
+
+/* Document & Evidence Paper rendering */
+.paper {
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(20, 38, 43, 0.16);
+  padding: 26px 28px;
+  font-family: 'IBM Plex Serif', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #22262B;
+}
+.hl {
+  position: relative;
+  background: rgba(224, 164, 88, 0.24);
+  outline: 2px solid #C07A22;
+  border-radius: 3px;
+}
+.hlab {
+  position: absolute;
+  right: -2px;
+  top: -22px;
+  background: #8A4B08;
+  color: #FFFFFF;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px 4px 0 0;
+}
+.dr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 6px 10px;
+  border-bottom: 1px solid #DDD9CF;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13.5px;
+}
+.dr4 {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 70px 60px;
+  gap: 8px;
+  padding: 5px 8px;
+  border-bottom: 1px solid #DDD9CF;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+}
+.hd { font-weight: 600; background: #F4F3EE; }
+.blur { filter: blur(2.4px); opacity: 0.75; }
+
+/* Grid Layout for Bidder Check */
+.grow-grid {
+  display: grid;
+  grid-template-columns: 230px repeat(6, minmax(0, 1fr));
+  border-bottom: 1px solid #F1EFE9;
+}
+.cell-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-left: 1px solid #F1EFE9;
+  background: #FFFFFF;
+  cursor: pointer;
+  height: 74px;
+  padding: 6px;
+  transition: all 0.1s ease;
+}
+.cell-box:hover { background: #FAF9F6; }
+.cell-box.on {
+  background: #E8F1F0;
+  outline: 2px solid #0F6B6E;
+  outline-offset: -2px;
+}
